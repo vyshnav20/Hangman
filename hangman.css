@@ -1,0 +1,136 @@
+body{
+	background-image: url("https://c.tenor.com/RqH54jCv970AAAAC/lines.gif") ;
+	background-size: cover;
+	margin: 0;
+}
+.clear{
+	clear: both;
+}
+.static{
+	
+	background: rgba(0, 0, 0, 0.2);
+	color: rgb(255, 255, 255);
+	font-size: 22px;
+	border: 1px solid grey;
+	border-radius: 3px;
+	margin-top: 10px;
+	padding: 15px;
+}
+#title{
+	color: #00ff95;
+	font-weight: bold;
+	margin: 25px 0 0 0;
+	text-align: center;
+	padding:5px;
+}
+#att{
+	text-align:center;
+	color:white;
+	margin:0;
+}
+#infoSign{
+	color: white;
+	cursor: pointer;
+	display: none;
+	font-size: 0.75em;
+	margin-left: 15px;
+	vertical-align: right;
+}
+#categoryDropdown{
+	background-color: rgba(35, 82, 124, 0.9);
+	color: white;
+	margin-top: 10px;
+}
+#categoryDropdown:hover{
+	background-color: rgb(35, 82, 124);
+}
+.category{
+	cursor: pointer;
+	font-weight: bold;
+	padding: 5px;
+}
+.category:hover{
+	background-color: #D9D9D9;
+}
+.dropdown{
+	text-align: center;
+}
+.button,
+.dropdown-menu{
+	color:#000000;
+	margin: 5px auto;
+}
+.dropdown-menu{
+	left: 50%;
+	margin-left: -87.5px;
+	width: 175px;
+	color:#000000
+}
+#hint{
+	margin-bottom: 10px;
+	margin-top: 10px;
+	text-align: center;
+}
+#howToPlay{
+	font-size: 1.1em;
+}
+#game{
+	display: none;
+	margin-top: 20px;
+	padding: 10px;
+	position: relative;
+	color:black;
+	background-color:#E3E3E3;
+	border-radius:5px;
+}
+#category{
+	margin: 0;
+}
+#importantStatus{
+	font-weight: bold;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+}
+#difficulty{
+	margin: 0;
+	padding: 0;
+}
+#hangman{
+	display: block;
+	margin: 30px auto;
+	padding-left: 0;
+	padding-right: 0;
+	width: 250px;
+}
+#keyboard{
+	font-size: 1.3em;
+	margin: 30px 0;
+	text-align: center;
+}
+#keyboard div{
+	margin: 15px 0;
+}
+#keyboard span{
+	border: 1px solid grey;
+	border-radius: 3px;
+	cursor: pointer;
+	margin: 5px;
+	padding: 5px 10px;
+}
+#keyboard span:hover{
+	background-color: #23527c;
+	color: #EEE;
+}
+
+#word{
+	font-weight: bold;
+	letter-spacing: 10px;
+	text-align: center;
+}
+.red{
+	color: red;
+}
+.center{
+	text-align: center;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="John Garbi">
+	<title>jsHangman - Google Code-in, FOSSASIA</title>
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
+	<link href="hangman.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class="container">
+		<h1 id="title">Hangman<span data-toggle="modal" data-target="#howToPlay" class="glyphicon glyphicon-info-sign" id="infoSign"></span></h1>
+		
+		<div class="static col-md-8 col-md-offset-2">
+			<div class="modal fade" id="howToPlay" tabindex="-1" role="dialog" aria-labelledby="howToPlayLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close Hangman Information Dialogue"><span aria-hidden="true">&times;</span>
+							</button>
+							<h4 class="modal-title" id="howToPlayLabel">How To Play Hangman</h4>
+						</div>
+						<div class="modal-body">
+							<p id="howToPlay">Hangman is a word guessing game. To play, select one of the categories from the drop-down menu labeled "Category". The point of the game is to guess all the other letters in the word with less than five mistakes, or before all the parts of the man being hanged are complete. You can type letters from anywhere on the screen with your keyboard or click / tap letters from the alphabet provided on the screen.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<p id="initialInfo">Hangman is a word guessing game. To play, select one of the categories from the drop-down menu labeled "Category". The point of the game is to guess all the other letters in the word with less than five mistakes, or before all the parts of the man being hanged are complete. You can type letters from anywhere on the screen with your keyboard or click / tap letters from the alphabet provided on the screen.</p>
+			<div class="clear"></div>
+			<div class="dropdown" id="menu">
+				<button href="#" data-toggle="dropdown" type="button" id="categoryDropdown" class="btn btn-default dropdown-toggle">Select Category <b class="caret"></b>
+				</button>
+				<ul class="dropdown-menu" role="menu" aria-labelledby="categoryDropdown">
+					<li id="0" class="category" role="presentation">Malayalam Actors</li>
+					<li id="1" class="category" role="presentation">Malayalam Movies</li>
+					<li id="2" class="category" role="presentation">Indian Cricket Players</li>
+					<li id="3" class="category" role="presentation">Hollywood Films</li>
+				</ul>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<div id="game" class="col-md-10 col-md-offset-1">
+			<h2 id="category"></h2>
+			<div id="importantStatus">
+				<p id="difficulty"></p>
+				<p id="triesLeft"></p>
+			</div>
+			<h3 id="word"></h3>
+			<div id="keyboard"></div>
+			<canvas id="hangman" height="300">
+			</canvas>
+			<div id="status">
+				<div class="alert alert-info center fade in">
+					<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+					<strong>Hint: </strong>You can use your physical keyboard or the alphabet provided to enter letters.
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
+	<script src="hangman.js"></script>
+
+	
+	<audio id="snd">   
+		<source src="cat.mp3" />   
+		</audio>  
+		<audio id="cat1">   
+			<source src="Oops.mp3" />   
+			</audio> 
+		<script>   
+			const mySound = document.getElementById("snd");   
+			const correctButton = document.getElementById("categoryDropdown");   
+			correctButton.addEventListener("click", function(){ mySound.play(); });   
+			
+			</script>  
+			<script>   
+				const mySound = document.getElementById("cat1");   
+				const correctButton = document.getElementById("1");   
+				correctButton.addEventListener("click", function(){ mySound.play(); });   
+				
+				</script>
+	
+</body>
+
+</html>
